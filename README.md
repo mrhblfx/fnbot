@@ -1,6 +1,13 @@
 # naxida_bot
 Simple, elegant QQ bot processing package
 
+You must install python3 beforehand
+
+Then:
+```
+pip install naxida
+```
+
 ## Configuration
 The configuration information is in **pybot.toml**
 
@@ -10,8 +17,8 @@ The example configuration is as follows:
 host = "127.0.0.1"
 port = 9900
 post = 9901
-bot_qq = 123456789 # The QQ number of the robot you want to set up
-group_list = [123456,1234567] # Group number for robotics activities
+bot_qq = 123456789 # The QQ number of the QQ bot you want to set up.
+group_list = [123456,1234567] # The qq group number that can use QQ bot function.
 ```
 
 ## The default file tree:
