@@ -36,54 +36,44 @@ group_list = [123456,1234567] # The qq group number that can use QQ bot function
 
 ## Usage:
 
-* in `./src/plugins/test.py`:
+* for `./src/plugins/test.py`:
 
 ```
-from naxida import InsertPrivate
-from naxida import InsertGroup
-from naxida import grace_rev
-from naxida import Send
+from fnbot import Send
+from fnbot import Rev
+from fnbot import IstMsg
 
-@InsertPrivate.handle()
-@InsertGroup.handle()
-def _(rev:dict):
-    if rev['message'] == '你好':
-        Send.send_msg(
-            rev['message_type'],rev['group_id'],
-            '你好'
-        )
-    elif rev['message'] == 'こんにちは':
-        Send.send_msg(
-            rev['message_type'],rev['group_id'],
-            'こんにちは'
-        )
-
-
-@InsertPrivate.manage()
-@InsertGroup.manage()
-@grace_rev('/test',['ciallo'])
-def _(msg_type:str, num_type:str, rev_msg:str, qq:str, rev:dict):
-    if rev_msg in ['ciallo']:
+@IstMsg.manage()
+@Rev.grace('/test')
+async def _(msg_type:str, num_type:str, rev:'Rev'):
+    if rev.match(['ciallo', 'こんにちは', '你好']):
         msg = 'ciallo!'
         Send.send_msg(msg_type,num_type,msg)
 ```
 
 ---
 
-* in `./bot.py`:
+* for `./bot.py`:
 
 ```
-import naxida
+import fnbot
 
-naxida.insert_plugin("test")
+fnbot.insert_plugin("test")
 
 if __name__ == "__main__":
-    naxida.run()
+    fnbot.run()
+```
+
+... or
+```
+>>> import fnbot
+>>> fnbot.insert_plugin("test")
+>>> fnbot.run()
 ```
 
 ---
 
 This code means that when you send `你好`,`こんにちは` or `ciallo`
-in the group or private, the bot will automatically reply `你好`,`こんにちは` or `ciallo`.
+in the group or private, the bot will automatically reply `ciallo!`.
 If you want to implement the above, you must fill in the necessary
 information in `pybot.toml`.
