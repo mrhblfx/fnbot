@@ -1,11 +1,11 @@
-# naxida_bot
+# fnbot
 Simple, elegant QQ bot processing package
 
 You must install python3 beforehand
 
 Then:
 ```
-pip install naxida
+pip install fnbot
 ```
 
 ## Configuration
@@ -48,7 +48,7 @@ from fnbot import IstMsg
 async def _(msg_type:str, num_type:str, rev:'Rev'):
     if rev.match(['ciallo', 'こんにちは', '你好']):
         msg = 'ciallo!'
-        Send.send_msg(msg_type,num_type,msg)
+        Send(rev).send_msg(msg_type,num_type,msg)
 ```
 
 ---
