@@ -41,7 +41,7 @@ servers:
 ```
 
 + Install python >= 3.8.10
-+ Run `pip install fnbot` on the command line
++ Run `git clone https://github.com/mrhblfx/fnbot` on the command line
 + Configure `pybot.toml`
 ```
 host = "127.0.0.1"
