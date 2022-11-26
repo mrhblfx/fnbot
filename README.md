@@ -72,4 +72,6 @@ group_list = [123456,1234567] # The group chat where QQbot is located
 - fnbot imports plugins from `./src/plugins` by default, but this is not mandatory
 - You can create a folder plugins in `./` and import plugins from the folder (by using `fnbot.insert_plugins("./plugins")`)
 
+## ......
+
 
