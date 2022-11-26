@@ -7,6 +7,10 @@ Then:
 ```
 pip install fnbot
 ```
+... or
+```
+pip install -r requirements.txt
+```
 
 ## Configuration
 The configuration information is in **pybot.toml**
