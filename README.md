@@ -1,6 +1,6 @@
 # ともたけ よしの bot
 *******************
-_This project is based on the [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) development of QQ entertainment robot_
+_🌱 This project is based on the [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) development of QQ entertainment robot 🌱_
 
 
 ## Quick Start(for windows)
