@@ -52,25 +52,21 @@ group_list = [123456,1234567] # The group chat where QQbot is located
 ```
 
 + Run `python bot.py` on the command line
++ If the file `funcfg.json` is generated automatically, you don't need to care about it
 
-**It's very simple for Linux, so I won't go into too much detail here**
-
-
-## The default file tree:
-```
-.
-├── bot.py
-├── pybot.toml
-├── funcfg.json (No need to bother with it)
-├── src
-│   ├── plugins
-```
+***It's very simple for Linux, so I won't go into too much detail here***
 
 
 ## Plugin
 - A plugin is a python module or package that can be anywhere
-- fnbot imports plugins from `./src/plugins` by default, but this is not mandatory
+- fnbot imports plugins from `./src/plugins` and `./` by default, but this is not mandatory
 - You can create a folder plugins in `./` and import plugins from the folder (by using `fnbot.insert_plugins("./plugins")`)
+
+### Example of a simple plugin
+
+### Example of a timed task
+
+## unfinished to be continued
 
 ## ......
 
