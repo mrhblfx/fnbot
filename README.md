@@ -63,6 +63,20 @@ group_list = [123456,1234567] # The group chat where QQbot is located
 - You can create a folder plugins in `./` and import plugins from the folder (by using `fnbot.insert_plugins("./plugins")`)
 
 ### Example of a simple plugin
+In the `. /src/plugins` folder, you can see the `test.py` file, which contains the following code
+```python
+from fnbot import Rev
+from fnbot import Send
+from fnbot import IstMsg
+
+@IstMsg.manage()
+@Rev.grace()
+async def _(msg_type:str, num_type:str, rev:'Rev'):
+    if rev.match(['ciallo',]):
+        msg = 'ciallo!'
+        Send(rev).send_msg(msg_type, num_type, msg)
+```
+What the above code does is when you send `ciallo` in a group chat or private chat, your bot will send `ciallo!`
 
 ### Example of a timed task
 
