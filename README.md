@@ -211,15 +211,15 @@ async def _(msg_type:str, num_type:str, rev:ciallo):
             await task.cancel()
         await task.start(rev)
 ```
-
 The above code achieves the following functions:
-When you send `riddle`, if you answer `Yes or yes` (when the number of times sent is less than or equal to three), the bot will send `Congratulation on your correct answer!`
-If you send something else but the number of times you send it is less than three, the bot will send `The answer doesn't seem to be this!`
-If you don't send anything, the bot will send `Wait timeout!!!    The answer is as follows:    Yes or yes`
-If you are `super_qq` or group owner or administrator, after sending `answer`, the bot will send `The answer is as follows: Yes or yes`
+- When you send `riddle`, if you answer `Yes or yes` (when the number of times sent is less than or equal to three), the bot will send `Congratulation on your correct answer!`
+- If you send something else but the number of times you send it is less than three, the bot will send `The answer doesn't seem to be this!`
+- If you don't send anything, the bot will send `Wait timeout!!!    The answer is as follows:    Yes or yes`
+- If you are `super_qq` or group owner or administrator, after sending `answer`, the bot will send `The answer is as follows: Yes or yes`
 
 
 ## unfinished to be continued
+
 
 ## ......
 
