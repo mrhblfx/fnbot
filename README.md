@@ -111,7 +111,7 @@ async def _(msg_type:str, num_type:str, rev:'ciallo'):
 ```
 The above code implements that when someone withdraws a message in the group, the bot automatically sends the message that the person withdraws, and then withdraws the message it sent after one second
 
-### Examples of complex scheduling task
+### Example of complex scheduling task
 ```python
 import time
 import asyncio
@@ -210,6 +210,7 @@ async def _(msg_type:str, num_type:str, rev:ciallo):
             Send(rev).send_msg(msg_type, num_type, msg)
             await task.cancel()
         await task.start(rev)
+```
 
 The above code achieves the following functions:
 When you send `riddle`, if you answer `Yes or yes` (when the number of times sent is less than or equal to three), the bot will send `Congratulation on your correct answer!`
