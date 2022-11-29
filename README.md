@@ -1,6 +1,6 @@
 # ともたけ よしの bot
 *******************
-_🌱 This project is based on the [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) development of QQ entertainment robot 🌱_
+_🌱 This project is based on the [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) and [fnbot](https://github.com/mrhblfx/fnbot) development of QQ entertainment robot 🌱_
 
 
 ## Quick Start(for windows)
@@ -110,6 +110,8 @@ async def _(msg_type:str, num_type:str, rev:'ciallo'):
             await task.start(rev)
 ```
 The above code implements that when someone withdraws a message in the group, the bot automatically sends the message that the person withdraws, and then withdraws the message it sent after one second
+
+### Examples of complex scheduling task
 
 ## unfinished to be continued
 
