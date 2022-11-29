@@ -54,13 +54,16 @@ group_list = [123456,1234567] # The group chat where QQbot is located
 + Run `python bot.py` on the command line
 + If the file `funcfg.json` is generated automatically, you don't need to care about it
 
-***It's very simple for Linux, so I won't go into too much detail here***
+> ***It's very simple for Linux, so I won't go into too much detail here***
 
 
 ## Plugin
 - A plugin is a python module or package that can be anywhere
 - fnbot imports plugins from `./src/plugins` and `./` by default, but this is not mandatory
 - You can create a folder plugins in `./` and import plugins from the folder (by using `fnbot.insert_plugins("./plugins")`)
+
+<details>
+<summary>Example of a simple plugin</summary>
 
 ### Example of a simple plugin
 In the `./src/plugins` folder, you can see the `test.py` file, which contains the following code:
@@ -77,6 +80,11 @@ async def _(msg_type:str, num_type:str, rev:'Rev'):
         Send(rev).send_msg(msg_type, num_type, msg)
 ```
 What the above code does is when you send `ciallo` in a group chat or private chat, your bot will send `ciallo!`
+
+</details>
+
+<details>
+<summary>Example of a timed task</summary>
 
 ### Example of a timed task
 In the `./plugins` folder, you can see the `basic.py` file, which contains the following code:
@@ -111,6 +119,11 @@ async def _(msg_type:str, num_type:str, rev:'ciallo'):
             await task.start(rev)
 ```
 The above code implements that when someone withdraws a message in the group, the bot automatically sends the message that the person withdraws, and then withdraws the message it sent after one second
+
+</details>
+
+<details>
+<summary>Example of complex scheduling task</summary>
 
 ### Example of complex scheduling task
 In the `./plugins` folder, you can see the `test.py` file, which contains the following code:
@@ -218,6 +231,8 @@ The above code achieves the following functions:
 - If you send something else but the number of times you send it is less than three, the bot will send `The answer doesn't seem to be this!`
 - If you don't send anything, the bot will send `Wait timeout!!!    The answer is as follows:    Yes or yes`
 - If you are `super_qq` or group owner or administrator, after sending `answer`, the bot will send `The answer is as follows: Yes or yes`
+
+</details>
 
 
 ## unfinished to be continued
