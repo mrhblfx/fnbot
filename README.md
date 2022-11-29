@@ -1,6 +1,10 @@
+<div align="center">
+
 # ともたけ よしの bot
 *******************
 _🌱 This project is based on the [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) and [fnbot](https://github.com/mrhblfx/fnbot) development of QQ entertainment robot 🌱_
+
+</div>
 
 
 ## Quick Start(for windows)
